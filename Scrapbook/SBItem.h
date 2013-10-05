@@ -10,10 +10,11 @@
 
 @interface SBItem : NSObject
 
+@property int rowid;
 @property NSString *url;
 @property NSString *title;
 @property NSString *owner;
 
--(id)initWithURL:(NSString *)photoUrl andTitle:(NSString *)titleText andOwner:(NSString *)ownerName;
+-(id)initWithURL:(NSString *)url andTitle:(NSString *)titleText andOwner:(NSString *)ownerName andId:(int)rid;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "SBItemsViewController.h"
+#import "SBDatabase.h"
 
 @interface SBItemsViewController ()
 
@@ -20,10 +21,12 @@
     if (self) {
         // Custom initialization
         
-        self.sbItems = [[NSMutableArray alloc] initWithCapacity:0];
+        //self.sbItems = [[NSMutableArray alloc] initWithCapacity:0];
+        self.sbItems = [SBDatabase fetchAllSBItems];
+
         
         // start with a dummy item
-        [self.sbItems addObject:[[SBItem alloc] initWithURL:@"http://distilleryimage4.s3.amazonaws.com/11f3675a07a211e3ada522000ae911d4_6.jpg" andTitle:@"Robot"  andOwner:@"Sumaiya"]];
+//        [self.sbItems addObject:[[SBItem alloc] initWithURL:@"http://distilleryimage4.s3.amazonaws.com/11f3675a07a211e3ada522000ae911d4_6.jpg" andTitle:@"Robot"  andOwner:@"Sumaiya"]];
         
         // register the type of view to create for a table cell
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
@@ -40,10 +43,13 @@
 }
 
 // this is called when from the AddSBItemViewController when someone taps the Add button
-- (void)addSBItem:(SBItem *)sbItemInfo
+- (void)addSBItem:(NSMutableDictionary *)data
 {
     // we have to tell the tableView to reload itself after we modify the data array
-    [self.sbItems addObject:sbItemInfo];
+    [SBDatabase saveSBItemWithURL:[data objectForKey:@"url"] andTitle:[data objectForKey:@"title"] andOwner:[data objectForKey:@"owner"]];
+    self.sbItems = [SBDatabase fetchAllSBItems];
+
+     //   [self.sbItems addObject:sbItemInfo];
     [self.tableView reloadData];
 }
 
@@ -117,7 +123,10 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [self.sbItems removeObjectAtIndex:indexPath.row];
+        [SBDatabase deleteSBItem:[[self.sbItems objectAtIndex:indexPath.row] rowid]];
+        self.sbItems = [SBDatabase fetchAllSBItems];
+
+        //[self.sbItems removeObjectAtIndex:indexPath.row];
         
         // When this next line is executed, the data has to agree with the changes this line is performing on the table view
         // if the data doesn't agree, the app falls all over itself and dies

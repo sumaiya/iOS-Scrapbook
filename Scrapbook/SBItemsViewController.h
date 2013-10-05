@@ -17,7 +17,7 @@
 @property AddSBItemViewController *addSBItemViewController;
 @property SBItemDetailViewController *sbItemDetailViewController;
 
-- (void)addSBItem:(NSMutableDictionary *)sbItemInfo;
+- (void)addSBItem:(NSMutableDictionary *)data;
 - (void)addButtonPressed;
 
 @end

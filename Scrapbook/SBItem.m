@@ -10,11 +10,13 @@
 
 @implementation SBItem
 
--(id)initWithURL:(NSString *)photoUrl andTitle:(NSString *)titleText andOwner:(NSString *)ownerName;
+-(id)initWithURL:(NSString *)photoUrl andTitle:(NSString *)titleText andOwner:(NSString *)ownerName andId:(int)rid
 {
+    self = [super init];
     self.url = photoUrl;
     self.title = titleText;
     self.owner = ownerName;
+    self.rowid = rid;
     return self;
 }
 @end

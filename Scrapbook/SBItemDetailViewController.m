@@ -26,6 +26,7 @@
 
 - (void)setFieldsWithUrl:(NSString *)newUrl andTitle:(NSString *)newTitle andOwner:(NSString *)newOwner;
 {
+    [self.view setNeedsDisplay];
     [self.photoTitle setText:newTitle];
     [self.owner setText:[NSString stringWithFormat:@"By %@", newOwner]];
     [self.photoView setImage:[UIImage imageWithData: [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: newUrl]]]];

@@ -33,7 +33,9 @@
 //}
 
 -(IBAction)addButtonDidGetPressed:(id)sender {
-    SBItem *temp = [[SBItem alloc] initWithURL:self.photoUrl andTitle:self.photoTitle.text andOwner:self.photoOwner.text];
+    NSMutableDictionary *temp = [NSMutableDictionary dictionaryWithObjects:[NSArray arrayWithObjects:self.photoUrl, self.photoTitle.text, self.photoOwner.text, nil] forKeys:[NSArray arrayWithObjects:@"url", @"title", @"owner", nil]];
+
+//    SBItem *temp = [[SBItem alloc] initWithURL:self.photoUrl andTitle:self.photoTitle.text andOwner:self.photoOwner.text andId:<#(int)#>];
     [self.target performSelector:self.action withObject:temp];
     [self clearFields];
     [self.navigationController popViewControllerAnimated:YES];
