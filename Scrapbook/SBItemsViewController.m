@@ -23,10 +23,6 @@
         
         //self.sbItems = [[NSMutableArray alloc] initWithCapacity:0];
         self.sbItems = [SBDatabase fetchAllSBItems];
-
-        
-        // start with a dummy item
-//        [self.sbItems addObject:[[SBItem alloc] initWithURL:@"http://distilleryimage4.s3.amazonaws.com/11f3675a07a211e3ada522000ae911d4_6.jpg" andTitle:@"Robot"  andOwner:@"Sumaiya"]];
         
         // register the type of view to create for a table cell
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
@@ -104,7 +100,7 @@
     
     //set image and text
     cell.imageView.image = [UIImage imageWithData: imageData];
-    [[cell textLabel] setText:[NSString stringWithFormat:@" by %@", temp.owner]];
+    [[cell textLabel] setText:[NSString stringWithFormat:@" %@", temp.title]];
     
     return cell;
 }

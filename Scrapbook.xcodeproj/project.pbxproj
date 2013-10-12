@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F00F42841807EC3C009B95A2 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = F00F42831807EC3C009B95A2 /* 86-camera.png */; };
+		F00F42861807EC48009B95A2 /* 41-picture-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = F00F42851807EC48009B95A2 /* 41-picture-frame.png */; };
 		F032BDB617FF69FB008BAB62 /* SBDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F032BDB517FF69FB008BAB62 /* SBDatabase.m */; };
 		F032BDB817FF944E008BAB62 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F032BDB717FF944D008BAB62 /* libsqlite3.dylib */; };
 		F032BDBA17FF946E008BAB62 /* sbItems.sql in Resources */ = {isa = PBXBuildFile; fileRef = F032BDB917FF946E008BAB62 /* sbItems.sql */; };
-		F039FEAF17F6B1A700F5D230 /* SBPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F039FEAD17F6B1A600F5D230 /* SBPhotosViewController.m */; };
-		F039FEB017F6B1A700F5D230 /* SBPhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F039FEAE17F6B1A600F5D230 /* SBPhotosViewController.xib */; };
+		F04FC0291807E2C200FDE304 /* FlickrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F04FC0271807E2C200FDE304 /* FlickrViewController.m */; };
+		F04FC02A1807E2C200FDE304 /* FlickrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F04FC0281807E2C200FDE304 /* FlickrViewController.xib */; };
 		F056A74F17F4B9BC0094158D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F056A74E17F4B9BC0094158D /* UIKit.framework */; };
 		F056A75117F4B9BC0094158D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F056A75017F4B9BC0094158D /* Foundation.framework */; };
 		F056A75317F4B9BC0094158D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F056A75217F4B9BC0094158D /* CoreGraphics.framework */; };
@@ -31,16 +33,23 @@
 		F05CFD9917F6BC4F003E32C1 /* FlickrTagSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F05CFD9817F6BC4F003E32C1 /* FlickrTagSearcher.m */; };
 		F069171817F6E5AC008FCDFC /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F069171717F6E5AC008FCDFC /* placeholder.jpg */; };
 		F085584C17F6FED20066074F /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = F085584B17F6FED20066074F /* placeholder.png */; };
+		F0ED9BC51807C03900DE656B /* scrapbookLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F0ED9BC31807C03900DE656B /* scrapbookLogo.png */; };
+		F0ED9BC61807C03900DE656B /* scrapbookLogoLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = F0ED9BC41807C03900DE656B /* scrapbookLogoLarge.png */; };
+		F0F5D0CD1807C6860068F038 /* SBPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F5D0CC1807C6860068F038 /* SBPhotosViewController.m */; };
+		F0F5D0D11807C77E0068F038 /* InstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F5D0CF1807C77E0068F038 /* InstagramViewController.m */; };
+		F0F5D0D21807C77E0068F038 /* InstagramViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F5D0D01807C77E0068F038 /* InstagramViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F00F42831807EC3C009B95A2 /* 86-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera.png"; sourceTree = "<group>"; };
+		F00F42851807EC48009B95A2 /* 41-picture-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "41-picture-frame.png"; sourceTree = "<group>"; };
 		F032BDB417FF69FB008BAB62 /* SBDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBDatabase.h; sourceTree = "<group>"; };
 		F032BDB517FF69FB008BAB62 /* SBDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDatabase.m; sourceTree = "<group>"; };
 		F032BDB717FF944D008BAB62 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		F032BDB917FF946E008BAB62 /* sbItems.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sbItems.sql; sourceTree = "<group>"; };
-		F039FEAC17F6B1A600F5D230 /* SBPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBPhotosViewController.h; sourceTree = "<group>"; };
-		F039FEAD17F6B1A600F5D230 /* SBPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBPhotosViewController.m; sourceTree = "<group>"; };
-		F039FEAE17F6B1A600F5D230 /* SBPhotosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBPhotosViewController.xib; sourceTree = "<group>"; };
+		F04FC0261807E2C200FDE304 /* FlickrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrViewController.h; sourceTree = "<group>"; };
+		F04FC0271807E2C200FDE304 /* FlickrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrViewController.m; sourceTree = "<group>"; };
+		F04FC0281807E2C200FDE304 /* FlickrViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlickrViewController.xib; sourceTree = "<group>"; };
 		F056A74B17F4B9BC0094158D /* Scrapbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrapbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F056A74E17F4B9BC0094158D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F056A75017F4B9BC0094158D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -70,6 +79,13 @@
 		F05CFD9817F6BC4F003E32C1 /* FlickrTagSearcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrTagSearcher.m; sourceTree = "<group>"; };
 		F069171717F6E5AC008FCDFC /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		F085584B17F6FED20066074F /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		F0ED9BC31807C03900DE656B /* scrapbookLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrapbookLogo.png; sourceTree = "<group>"; };
+		F0ED9BC41807C03900DE656B /* scrapbookLogoLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrapbookLogoLarge.png; sourceTree = "<group>"; };
+		F0F5D0CB1807C6860068F038 /* SBPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBPhotosViewController.h; sourceTree = "<group>"; };
+		F0F5D0CC1807C6860068F038 /* SBPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBPhotosViewController.m; sourceTree = "<group>"; };
+		F0F5D0CE1807C77E0068F038 /* InstagramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramViewController.h; sourceTree = "<group>"; };
+		F0F5D0CF1807C77E0068F038 /* InstagramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramViewController.m; sourceTree = "<group>"; };
+		F0F5D0D01807C77E0068F038 /* InstagramViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				F056A75D17F4B9BC0094158D /* SBAppDelegate.h */,
+				F00F42831807EC3C009B95A2 /* 86-camera.png */,
+				F00F42851807EC48009B95A2 /* 41-picture-frame.png */,
 				F056A75E17F4B9BC0094158D /* SBAppDelegate.m */,
 				F056A78017F4C01E0094158D /* SBItem.h */,
 				F056A78117F4C01E0094158D /* SBItem.m */,
@@ -135,9 +153,14 @@
 				F032BDB517FF69FB008BAB62 /* SBDatabase.m */,
 				F032BDB917FF946E008BAB62 /* sbItems.sql */,
 				F069171717F6E5AC008FCDFC /* placeholder.jpg */,
-				F039FEAC17F6B1A600F5D230 /* SBPhotosViewController.h */,
-				F039FEAD17F6B1A600F5D230 /* SBPhotosViewController.m */,
-				F039FEAE17F6B1A600F5D230 /* SBPhotosViewController.xib */,
+				F0F5D0CB1807C6860068F038 /* SBPhotosViewController.h */,
+				F0F5D0CC1807C6860068F038 /* SBPhotosViewController.m */,
+				F0F5D0CE1807C77E0068F038 /* InstagramViewController.h */,
+				F0F5D0CF1807C77E0068F038 /* InstagramViewController.m */,
+				F0F5D0D01807C77E0068F038 /* InstagramViewController.xib */,
+				F04FC0261807E2C200FDE304 /* FlickrViewController.h */,
+				F04FC0271807E2C200FDE304 /* FlickrViewController.m */,
+				F04FC0281807E2C200FDE304 /* FlickrViewController.xib */,
 				F05CFD9417F6BB37003E32C1 /* InstagramTagSearcher.h */,
 				F05CFD9517F6BB37003E32C1 /* InstagramTagSearcher.m */,
 				F05CFD9717F6BC4F003E32C1 /* FlickrTagSearcher.h */,
@@ -151,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				F056A75617F4B9BC0094158D /* Scrapbook-Info.plist */,
+				F0ED9BC31807C03900DE656B /* scrapbookLogo.png */,
+				F0ED9BC41807C03900DE656B /* scrapbookLogoLarge.png */,
 				F056A75717F4B9BC0094158D /* InfoPlist.strings */,
 				F056A75A17F4B9BC0094158D /* main.m */,
 				F056A75C17F4B9BC0094158D /* Scrapbook-Prefix.pch */,
@@ -219,10 +244,15 @@
 				F056A76517F4B9BC0094158D /* Default-568h@2x.png in Resources */,
 				F056A77A17F4BE0E0094158D /* AddSBItemViewController.xib in Resources */,
 				F056A77F17F4BF4E0094158D /* SBItemDetailViewController.xib in Resources */,
-				F039FEB017F6B1A700F5D230 /* SBPhotosViewController.xib in Resources */,
 				F069171817F6E5AC008FCDFC /* placeholder.jpg in Resources */,
 				F085584C17F6FED20066074F /* placeholder.png in Resources */,
 				F032BDBA17FF946E008BAB62 /* sbItems.sql in Resources */,
+				F0ED9BC51807C03900DE656B /* scrapbookLogo.png in Resources */,
+				F0ED9BC61807C03900DE656B /* scrapbookLogoLarge.png in Resources */,
+				F0F5D0D21807C77E0068F038 /* InstagramViewController.xib in Resources */,
+				F04FC02A1807E2C200FDE304 /* FlickrViewController.xib in Resources */,
+				F00F42841807EC3C009B95A2 /* 86-camera.png in Resources */,
+				F00F42861807EC48009B95A2 /* 41-picture-frame.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,10 +269,12 @@
 				F056A77917F4BE0E0094158D /* AddSBItemViewController.m in Sources */,
 				F056A77E17F4BF4E0094158D /* SBItemDetailViewController.m in Sources */,
 				F056A78217F4C01E0094158D /* SBItem.m in Sources */,
-				F039FEAF17F6B1A700F5D230 /* SBPhotosViewController.m in Sources */,
 				F05CFD9617F6BB37003E32C1 /* InstagramTagSearcher.m in Sources */,
 				F05CFD9917F6BC4F003E32C1 /* FlickrTagSearcher.m in Sources */,
 				F032BDB617FF69FB008BAB62 /* SBDatabase.m in Sources */,
+				F0F5D0CD1807C6860068F038 /* SBPhotosViewController.m in Sources */,
+				F0F5D0D11807C77E0068F038 /* InstagramViewController.m in Sources */,
+				F04FC0291807E2C200FDE304 /* FlickrViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

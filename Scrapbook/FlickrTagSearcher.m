@@ -14,7 +14,7 @@
 {
     self = [super init];
     // assemble url to access api
-    NSString* url = [NSString stringWithFormat: @"http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=7a5959f71c12c8b6f430bf02723a51b0&tags=%@&per_page=10&format=json&nojsoncallback=1", query];
+    NSString* url = [NSString stringWithFormat: @"http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=7a5959f71c12c8b6f430bf02723a51b0&tags=%@&per_page=30&format=json&nojsoncallback=1", query];
     // limit to 10 photos
     if (self) {
         self.connection = [[NSURLConnection alloc] initWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]] delegate:self];

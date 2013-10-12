@@ -38,7 +38,7 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSMutableDictionary* dictionary = [NSJSONSerialization JSONObjectWithData:self.data options:NSJSONReadingMutableContainers error:nil];
     // read self.data JSON into a dictionary
-    
+
     [self.target performSelector:self.action withObject:dictionary];
     // call action on target with args dictionary
 }

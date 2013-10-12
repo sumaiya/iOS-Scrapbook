@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InstagramViewController.h"
+//#import "FlickrViewController.h"
 #import "InstagramTagSearcher.h"
 #import "FlickrTagSearcher.h"
 
@@ -17,21 +19,11 @@
 - (void)photosViewController:(SBPhotosViewController *)sbViewController didGetUrl:(NSString *)url;
 @end
 
-@interface SBPhotosViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-
-@property (strong, nonatomic) IBOutlet UITextField *queryField;
-@property (strong, nonatomic) IBOutlet UITableView *photosTableView;
-
-@property (strong, nonatomic) InstagramTagSearcher *instagramSearcher;
-@property (strong, nonatomic) FlickrTagSearcher *flickrSearcher;
-
-@property NSMutableArray *instagramPhotos;
-@property NSMutableArray *flickrPhotos;
+@interface SBPhotosViewController : UIViewController
+@property (strong, nonatomic) InstagramViewController *instagramView;
+//@property (strong, nonatomic) FlickrViewController *flickrView;
+@property (strong, nonatomic) UITabBarController *tabBarController;
 
 @property (nonatomic, weak) id <SBPhotosViewControllerDelegate> delegate;
-
-
-- (void)handleInstagramData:(NSMutableDictionary *)data;
-- (void)handleFlickrData:(NSMutableDictionary *)data;
 
 @end
