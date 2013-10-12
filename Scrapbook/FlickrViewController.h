@@ -18,7 +18,7 @@
 @interface FlickrViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) IBOutlet UITextField *queryField;
-@property (strong, nonatomic) IBOutlet UICollectionView *photosCollectionView;
+@property (strong, nonatomic) UICollectionView *photosCollectionView;
 @property (strong, nonatomic) FlickrTagSearcher *searcher;
 @property NSMutableArray *flickrPhotos;
 

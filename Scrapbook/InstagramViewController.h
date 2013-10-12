@@ -18,7 +18,7 @@
 @interface InstagramViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) IBOutlet UITextField *queryField;
-@property (strong, nonatomic) IBOutlet UICollectionView *photosCollectionView;
+@property (strong, nonatomic) UICollectionView *photosCollectionView;
 @property (strong, nonatomic) InstagramTagSearcher *searcher;
 @property NSMutableArray *instagramPhotos;
 

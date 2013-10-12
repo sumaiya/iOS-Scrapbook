@@ -35,7 +35,6 @@
 		F085584C17F6FED20066074F /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = F085584B17F6FED20066074F /* placeholder.png */; };
 		F0ED9BC51807C03900DE656B /* scrapbookLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F0ED9BC31807C03900DE656B /* scrapbookLogo.png */; };
 		F0ED9BC61807C03900DE656B /* scrapbookLogoLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = F0ED9BC41807C03900DE656B /* scrapbookLogoLarge.png */; };
-		F0F5D0CD1807C6860068F038 /* SBPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F5D0CC1807C6860068F038 /* SBPhotosViewController.m */; };
 		F0F5D0D11807C77E0068F038 /* InstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F5D0CF1807C77E0068F038 /* InstagramViewController.m */; };
 		F0F5D0D21807C77E0068F038 /* InstagramViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F5D0D01807C77E0068F038 /* InstagramViewController.xib */; };
 /* End PBXBuildFile section */
@@ -81,8 +80,6 @@
 		F085584B17F6FED20066074F /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		F0ED9BC31807C03900DE656B /* scrapbookLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrapbookLogo.png; sourceTree = "<group>"; };
 		F0ED9BC41807C03900DE656B /* scrapbookLogoLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrapbookLogoLarge.png; sourceTree = "<group>"; };
-		F0F5D0CB1807C6860068F038 /* SBPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBPhotosViewController.h; sourceTree = "<group>"; };
-		F0F5D0CC1807C6860068F038 /* SBPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBPhotosViewController.m; sourceTree = "<group>"; };
 		F0F5D0CE1807C77E0068F038 /* InstagramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramViewController.h; sourceTree = "<group>"; };
 		F0F5D0CF1807C77E0068F038 /* InstagramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramViewController.m; sourceTree = "<group>"; };
 		F0F5D0D01807C77E0068F038 /* InstagramViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramViewController.xib; sourceTree = "<group>"; };
@@ -134,9 +131,9 @@
 		F056A75417F4B9BC0094158D /* Scrapbook */ = {
 			isa = PBXGroup;
 			children = (
-				F056A75D17F4B9BC0094158D /* SBAppDelegate.h */,
 				F00F42831807EC3C009B95A2 /* 86-camera.png */,
 				F00F42851807EC48009B95A2 /* 41-picture-frame.png */,
+				F056A75D17F4B9BC0094158D /* SBAppDelegate.h */,
 				F056A75E17F4B9BC0094158D /* SBAppDelegate.m */,
 				F056A78017F4C01E0094158D /* SBItem.h */,
 				F056A78117F4C01E0094158D /* SBItem.m */,
@@ -153,8 +150,6 @@
 				F032BDB517FF69FB008BAB62 /* SBDatabase.m */,
 				F032BDB917FF946E008BAB62 /* sbItems.sql */,
 				F069171717F6E5AC008FCDFC /* placeholder.jpg */,
-				F0F5D0CB1807C6860068F038 /* SBPhotosViewController.h */,
-				F0F5D0CC1807C6860068F038 /* SBPhotosViewController.m */,
 				F0F5D0CE1807C77E0068F038 /* InstagramViewController.h */,
 				F0F5D0CF1807C77E0068F038 /* InstagramViewController.m */,
 				F0F5D0D01807C77E0068F038 /* InstagramViewController.xib */,
@@ -272,7 +267,6 @@
 				F05CFD9617F6BB37003E32C1 /* InstagramTagSearcher.m in Sources */,
 				F05CFD9917F6BC4F003E32C1 /* FlickrTagSearcher.m in Sources */,
 				F032BDB617FF69FB008BAB62 /* SBDatabase.m in Sources */,
-				F0F5D0CD1807C6860068F038 /* SBPhotosViewController.m in Sources */,
 				F0F5D0D11807C77E0068F038 /* InstagramViewController.m in Sources */,
 				F04FC0291807E2C200FDE304 /* FlickrViewController.m in Sources */,
 			);

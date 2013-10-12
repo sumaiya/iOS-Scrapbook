@@ -26,10 +26,13 @@
 - (void)viewDidLoad
 {
     UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
-    self.photosCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(59, 94, 211, 257) collectionViewLayout:layout];
+    [layout setSectionInset: UIEdgeInsetsMake(15, 15, 0, 15)];
+    [layout setMinimumLineSpacing:10];
+    self.photosCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 80, 320, 290) collectionViewLayout:layout];
     self.photosCollectionView.delegate = self;
     self.photosCollectionView.dataSource = self;
-    
+    [self.photosCollectionView setBackgroundColor:[UIColor whiteColor]];
+
     [self.photosCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
     [self.view addSubview:self.photosCollectionView];
     [self.photosCollectionView reloadData];
@@ -106,7 +109,7 @@
     // get an image view from URL
     NSData *imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: url]];
     
-    UIImageView *viewWithPhoto = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,50,50)];
+    UIImageView *viewWithPhoto = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,86,86)];
     viewWithPhoto.image = [UIImage imageWithData: imageData];
     
     [cell.contentView addSubview:viewWithPhoto];
@@ -126,12 +129,8 @@
 #pragma mark – UICollectionViewDelegateFlowLayout
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGSize itemSize = CGSizeMake(100, 100);
+    CGSize itemSize = CGSizeMake(86,86);
     return itemSize;
 }
 
-- (UIEdgeInsets)collectionView:
-(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(50, 20, 50, 20);
-}
 @end
