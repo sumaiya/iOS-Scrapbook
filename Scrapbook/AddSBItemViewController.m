@@ -5,9 +5,9 @@
 //  Created by Sumaiya Hashmi on 9/26/13.
 //  Copyright (c) 2013 Sumaiya Hashmi. All rights reserved.
 //
-// tab bar button icons from glyphish.com
 
 #import "AddSBItemViewController.h"
+#import "SBAppDelegate.h"
 
 @interface AddSBItemViewController ()
 
@@ -51,7 +51,6 @@
 -(IBAction)addButtonDidGetPressed:(id)sender {
     NSMutableDictionary *temp = [NSMutableDictionary dictionaryWithObjects:[NSArray arrayWithObjects:self.photoUrl, self.photoTitle.text, self.photoOwner.text, nil] forKeys:[NSArray arrayWithObjects:@"url", @"title", @"owner", nil]];
 
-//    SBItem *temp = [[SBItem alloc] initWithURL:self.photoUrl andTitle:self.photoTitle.text andOwner:self.photoOwner.text andId:<#(int)#>];
     [self.target performSelector:self.action withObject:temp];
     [self clearFields];
     [self.navigationController popViewControllerAnimated:YES];
@@ -91,7 +90,7 @@
 
 - (void)viewDidLoad
 {
-    [self.photoView setBackgroundColor:[UIColor grayColor]];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[(SBAppDelegate *)[[UIApplication sharedApplication] delegate] BACKGROUND_TEXTURE]]]];;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }

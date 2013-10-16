@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Sumaiya Hashmi. All rights reserved.
 //
 
+#import "SBAppDelegate.h"
 #import "FlickrViewController.h"
 
 @interface FlickrViewController ()
@@ -25,20 +26,23 @@
 
 - (void)viewDidLoad
 {
+    self.title = @"Select Photo";
+    
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[(SBAppDelegate *)[[UIApplication sharedApplication] delegate] BACKGROUND_TEXTURE]]]];;
+    
     UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
     [layout setSectionInset: UIEdgeInsetsMake(15, 15, 0, 15)];
     [layout setMinimumLineSpacing:10];
+    
     self.photosCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 80, 320, 290) collectionViewLayout:layout];
     self.photosCollectionView.delegate = self;
     self.photosCollectionView.dataSource = self;
-    [self.photosCollectionView setBackgroundColor:[UIColor whiteColor]];
-
+    [self.photosCollectionView setBackgroundColor:[UIColor clearColor]];
     [self.photosCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
     [self.view addSubview:self.photosCollectionView];
     [self.photosCollectionView reloadData];
-    self.title = @"Select Photo";
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning

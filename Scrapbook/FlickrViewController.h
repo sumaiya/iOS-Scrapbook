@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FlickrTagSearcher.h"
+extern UIColor* BACKGROUND_TEXTURE;
 
 @class FlickrViewController;
 

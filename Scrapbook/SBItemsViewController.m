@@ -8,6 +8,7 @@
 
 #import "SBItemsViewController.h"
 #import "SBDatabase.h"
+#import "SBAppDelegate.h"
 
 @interface SBItemsViewController ()
 
@@ -101,7 +102,6 @@
     //set image and text
     cell.imageView.image = [UIImage imageWithData: imageData];
     [[cell textLabel] setText:[NSString stringWithFormat:@" %@", temp.title]];
-    
     return cell;
 }
 

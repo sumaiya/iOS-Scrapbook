@@ -31,8 +31,7 @@
 		F056A78217F4C01E0094158D /* SBItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F056A78117F4C01E0094158D /* SBItem.m */; };
 		F05CFD9617F6BB37003E32C1 /* InstagramTagSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F05CFD9517F6BB37003E32C1 /* InstagramTagSearcher.m */; };
 		F05CFD9917F6BC4F003E32C1 /* FlickrTagSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F05CFD9817F6BC4F003E32C1 /* FlickrTagSearcher.m */; };
-		F069171817F6E5AC008FCDFC /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F069171717F6E5AC008FCDFC /* placeholder.jpg */; };
-		F085584C17F6FED20066074F /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = F085584B17F6FED20066074F /* placeholder.png */; };
+		F097C4EE180E41A900CAE500 /* subtle_grunge.png in Resources */ = {isa = PBXBuildFile; fileRef = F097C4ED180E41A900CAE500 /* subtle_grunge.png */; };
 		F0ED9BC51807C03900DE656B /* scrapbookLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F0ED9BC31807C03900DE656B /* scrapbookLogo.png */; };
 		F0ED9BC61807C03900DE656B /* scrapbookLogoLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = F0ED9BC41807C03900DE656B /* scrapbookLogoLarge.png */; };
 		F0F5D0D11807C77E0068F038 /* InstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F5D0CF1807C77E0068F038 /* InstagramViewController.m */; };
@@ -76,8 +75,7 @@
 		F05CFD9517F6BB37003E32C1 /* InstagramTagSearcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramTagSearcher.m; sourceTree = "<group>"; };
 		F05CFD9717F6BC4F003E32C1 /* FlickrTagSearcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrTagSearcher.h; sourceTree = "<group>"; };
 		F05CFD9817F6BC4F003E32C1 /* FlickrTagSearcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrTagSearcher.m; sourceTree = "<group>"; };
-		F069171717F6E5AC008FCDFC /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
-		F085584B17F6FED20066074F /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		F097C4ED180E41A900CAE500 /* subtle_grunge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subtle_grunge.png; sourceTree = "<group>"; };
 		F0ED9BC31807C03900DE656B /* scrapbookLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrapbookLogo.png; sourceTree = "<group>"; };
 		F0ED9BC41807C03900DE656B /* scrapbookLogoLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrapbookLogoLarge.png; sourceTree = "<group>"; };
 		F0F5D0CE1807C77E0068F038 /* InstagramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramViewController.h; sourceTree = "<group>"; };
@@ -142,14 +140,13 @@
 				F056A77B17F4BF4E0094158D /* SBItemDetailViewController.h */,
 				F056A77C17F4BF4E0094158D /* SBItemDetailViewController.m */,
 				F056A77D17F4BF4E0094158D /* SBItemDetailViewController.xib */,
-				F085584B17F6FED20066074F /* placeholder.png */,
 				F056A77617F4BE0D0094158D /* AddSBItemViewController.h */,
 				F056A77717F4BE0E0094158D /* AddSBItemViewController.m */,
 				F056A77817F4BE0E0094158D /* AddSBItemViewController.xib */,
+				F097C4ED180E41A900CAE500 /* subtle_grunge.png */,
 				F032BDB417FF69FB008BAB62 /* SBDatabase.h */,
 				F032BDB517FF69FB008BAB62 /* SBDatabase.m */,
 				F032BDB917FF946E008BAB62 /* sbItems.sql */,
-				F069171717F6E5AC008FCDFC /* placeholder.jpg */,
 				F0F5D0CE1807C77E0068F038 /* InstagramViewController.h */,
 				F0F5D0CF1807C77E0068F038 /* InstagramViewController.m */,
 				F0F5D0D01807C77E0068F038 /* InstagramViewController.xib */,
@@ -239,8 +236,6 @@
 				F056A76517F4B9BC0094158D /* Default-568h@2x.png in Resources */,
 				F056A77A17F4BE0E0094158D /* AddSBItemViewController.xib in Resources */,
 				F056A77F17F4BF4E0094158D /* SBItemDetailViewController.xib in Resources */,
-				F069171817F6E5AC008FCDFC /* placeholder.jpg in Resources */,
-				F085584C17F6FED20066074F /* placeholder.png in Resources */,
 				F032BDBA17FF946E008BAB62 /* sbItems.sql in Resources */,
 				F0ED9BC51807C03900DE656B /* scrapbookLogo.png in Resources */,
 				F0ED9BC61807C03900DE656B /* scrapbookLogoLarge.png in Resources */,
@@ -248,6 +243,7 @@
 				F04FC02A1807E2C200FDE304 /* FlickrViewController.xib in Resources */,
 				F00F42841807EC3C009B95A2 /* 86-camera.png in Resources */,
 				F00F42861807EC48009B95A2 /* 41-picture-frame.png in Resources */,
+				F097C4EE180E41A900CAE500 /* subtle_grunge.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

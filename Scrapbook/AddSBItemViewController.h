@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "SBItem.h"
-#import "SBPhotosViewController.h"
 #import "InstagramViewController.h"
 #import "FlickrViewController.h"
 

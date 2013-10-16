@@ -7,6 +7,8 @@
 //
 
 #import "SBItemDetailViewController.h"
+#import "SBAppDelegate.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface SBItemDetailViewController ()
 
@@ -34,6 +36,11 @@
 
 - (void)viewDidLoad
 {
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[(SBAppDelegate *)[[UIApplication sharedApplication] delegate] BACKGROUND_TEXTURE]]]];;
+    
+    [self.photoView.layer setBorderColor: [[UIColor blackColor] CGColor]];
+    [self.photoView.layer setBorderWidth: 4.0];
+
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }

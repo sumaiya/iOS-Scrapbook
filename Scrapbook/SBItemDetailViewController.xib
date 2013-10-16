@@ -40,7 +40,7 @@
 					<object class="IBUILabel" id="605830589">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{64, 301}, {196, 82}}</string>
+						<string key="NSFrame">{{64, 296}, {196, 82}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -49,20 +49,22 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">photographer</string>
+						<string key="IBUIText">description</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC44NzY1MDA0MTc3IDEgMC45MTA3NjI3NTU2AA</bytes>
+							<bytes key="NSRGB">MC4xMzUxMzg1MDIxIDAuMjAxMDMyMzY2MSAwLjE2NDAzMjg4NzMAA</bytes>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
 						<int key="IBUITextAlignment">1</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
-							<int key="type">1</int>
+							<string key="name">Optima-Regular</string>
+							<string key="family">Optima</string>
+							<int key="traits">0</int>
 							<double key="pointSize">27</double>
 						</object>
 						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Helvetica</string>
+							<string key="NSName">Optima-Regular</string>
 							<double key="NSSize">27</double>
 							<int key="NSfFlags">16</int>
 						</object>
@@ -84,19 +86,19 @@
 						<string key="IBUIText">title</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC44NzY1MDA0MTc3IDEgMC45MTA3NjI3NTU2AA</bytes>
+							<bytes key="NSRGB">MC4xMzUxMzg1MDIxIDAuMjAxMDMyMzY2MSAwLjE2NDAzMjg4NzMAA</bytes>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
 						<int key="IBUITextAlignment">1</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
-							<string key="name">Thonburi</string>
-							<string key="family">Thonburi</string>
+							<string key="name">Optima-Regular</string>
+							<string key="family">Optima</string>
 							<int key="traits">0</int>
 							<double key="pointSize">35</double>
 						</object>
 						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Thonburi</string>
+							<string key="NSName">Optima-Regular</string>
 							<double key="NSSize">35</double>
 							<int key="NSfFlags">16</int>
 						</object>
@@ -119,8 +121,8 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="641648623"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">1</int>
-					<bytes key="NSRGB">MC41MDE3MjQxMzU3IDAuNzQxNzA5MTgzNyAwLjU5OTk4MDMyMzkAA</bytes>
+					<int key="NSColorSpace">3</int>
+					<bytes key="NSWhite">MCAwAA</bytes>
 				</object>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
@@ -191,7 +193,7 @@
 						<int key="objectID">1</int>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
-							<object class="IBNSLayoutConstraint" id="650389386">
+							<object class="IBNSLayoutConstraint" id="584795392">
 								<reference key="firstItem" ref="605830589"/>
 								<int key="firstAttribute">3</int>
 								<int key="relation">0</int>
@@ -199,7 +201,7 @@
 								<int key="secondAttribute">4</int>
 								<float key="multiplier">1</float>
 								<object class="IBLayoutConstant" key="constant">
-									<double key="value">0.0</double>
+									<double key="value">-5</double>
 								</object>
 								<float key="priority">1000</float>
 								<reference key="containingView" ref="191373211"/>
@@ -223,15 +225,15 @@
 								<float key="scoringTypeFloat">24</float>
 								<int key="contentType">2</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="686953877">
+							<object class="IBNSLayoutConstraint" id="519155116">
 								<reference key="firstItem" ref="723140903"/>
 								<int key="firstAttribute">3</int>
 								<int key="relation">0</int>
-								<reference key="secondItem" ref="641648623"/>
-								<int key="secondAttribute">4</int>
+								<reference key="secondItem" ref="191373211"/>
+								<int key="secondAttribute">3</int>
 								<float key="multiplier">1</float>
 								<object class="IBLayoutConstant" key="constant">
-									<double key="value">34</double>
+									<double key="value">259</double>
 								</object>
 								<float key="priority">1000</float>
 								<reference key="containingView" ref="191373211"/>
@@ -472,13 +474,13 @@
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">175</int>
-						<reference key="object" ref="650389386"/>
+						<int key="objectID">178</int>
+						<reference key="object" ref="519155116"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">176</int>
-						<reference key="object" ref="686953877"/>
+						<int key="objectID">183</int>
+						<reference key="object" ref="584795392"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -493,9 +495,9 @@
 					<reference ref="1022347220"/>
 					<reference ref="768913129"/>
 					<reference ref="590713166"/>
-					<reference ref="686953877"/>
+					<reference ref="519155116"/>
 					<reference ref="304363833"/>
-					<reference ref="650389386"/>
+					<reference ref="584795392"/>
 				</array>
 				<string key="112.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -513,8 +515,8 @@
 				<string key="166.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="173.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="174.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="175.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="176.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="178.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="183.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="54.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<array key="54.IBViewMetadataConstraints">
 					<reference ref="642872313"/>
@@ -532,7 +534,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">176</int>
+			<int key="maxID">183</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
