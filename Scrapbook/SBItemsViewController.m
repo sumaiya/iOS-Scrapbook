@@ -29,9 +29,45 @@
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
         
         // initialize the sb item creation view controller
-        self.addSBItemViewController = [[AddSBItemViewController alloc] initWithNibName:@"AddSBItemViewController" bundle:nil];
-        self.addSBItemViewController.target = self;
-        self.addSBItemViewController.action = @selector(addSBItem:);
+//        self.addSBItemViewController = [[AddSBItemViewController alloc] initWithNibName:@"AddSBItemViewController" bundle:nil];
+//        self.addSBItemViewController.target = self;
+//        self.addSBItemViewController.action = @selector(addSBItem:);
+//
+        
+        //create the tab bar controller object
+        self.tabBarController = [[UITabBarController alloc] init];
+        
+        //create the first view controller
+        self.instagramView = [[InstagramViewController alloc] initWithNibName:@"InstagramViewController" bundle:nil];
+        [self.instagramView.view setFrame:[[UIScreen mainScreen] bounds]];
+        //this is where we set the main (instagram) view's representation on the tab bar
+        self.instagramView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Instagram" image:[UIImage imageNamed:@"86-camera.png"] tag:1];
+        
+        //create the second view controller
+        self.flickrView = [[FlickrViewController alloc] initWithNibName:@"FlickrViewController" bundle:nil];
+        [self.flickrView.view setFrame:[[UIScreen mainScreen] bounds]];
+        
+        //this is where we set the flickr view's representation on the tab bar
+        self.flickrView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Flickr" image:[UIImage imageNamed:@"41-picture-frame.png"] tag:2];
+        
+        //set up camera view controller
+        self.cameraView = [[CameraViewController alloc] init];
+        [self.cameraView setup];
+        self.cameraView.photoReel.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Photo Reel" image:[UIImage imageNamed:@"41-picture-frame.png"] tag:3];
+        
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            self.cameraView.camera.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Camera" image:[UIImage imageNamed:@"86-camera.png"] tag:4];
+            [self.tabBarController setViewControllers:[NSArray arrayWithObjects:self.instagramView, self.flickrView, self.cameraView.photoReel, self.cameraView.camera, nil] animated:YES];
+        }
+        //add the viewcontrollers to the tab bar
+        else {
+            [self.tabBarController setViewControllers:[NSArray arrayWithObjects:self.instagramView, self.flickrView, self.cameraView.photoReel, nil] animated:YES];
+        }
+
+        
+//        self.flickrView.delegate = self;
+//        self.instagramView.delegate = self;
+
         
         // initialize the sb item detail view controller
         self.sbItemDetailViewController = [[SBItemDetailViewController alloc] initWithNibName:@"SBItemDetailViewController" bundle:nil];
@@ -52,7 +88,7 @@
 
 - (void)addButtonPressed
 {
-    [self.navigationController pushViewController:self.addSBItemViewController animated:YES];
+    [self.navigationController pushViewController:self.tabBarController animated:YES];
 }
 
 - (void)viewDidLoad

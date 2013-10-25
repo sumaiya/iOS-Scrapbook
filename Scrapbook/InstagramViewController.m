@@ -8,6 +8,7 @@
 
 #import "InstagramViewController.h"
 #import "SBAppDelegate.h"
+#import "CropperViewController.h"
 
 @interface InstagramViewController ()
 
@@ -20,6 +21,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.instagramPhotos = [[NSMutableArray alloc] initWithCapacity:0];
+        self.croppingView = [[CropperViewController alloc] init];
+        [self.croppingView setup];
+        self.delegate = self.croppingView;
     }
     return self;
 }
@@ -132,8 +136,16 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *url = [self.instagramPhotos objectAtIndex:indexPath.item];
-    [self.delegate didGetUrl:url]; //pass URL back to AddSBItemViewController
-    [self.navigationController popViewControllerAnimated:YES];
+   // [self.delegate didGetUrl:url]; //pass URL back to AddSBItemViewController
+    
+    NSData *imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: url]];
+    
+    UIImage *imageToSend = [UIImage imageWithData: imageData];
+      
+    [self.delegate didGetImage:imageToSend];
+    
+    [self.navigationController pushViewController:self.croppingView animated:YES];
+//    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark – UICollectionViewDelegateFlowLayout

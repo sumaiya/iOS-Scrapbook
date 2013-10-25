@@ -5,15 +5,15 @@
 //  Created by Sumaiya Hashmi on 10/10/13.
 //  Copyright (c) 2013 Sumaiya Hashmi. All rights reserved.
 //
-
 #import <UIKit/UIKit.h>
 #import "InstagramTagSearcher.h"
 
 @class InstagramViewController;
-
 @protocol InstagramViewControllerDelegate <NSObject>
-- (void)didGetUrl:(NSString *)url;
+- (void)didGetImage:(UIImage *)sentImage;
 @end
+
+@class CropperViewController;
 
 @interface InstagramViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -21,6 +21,10 @@
 @property (strong, nonatomic) UICollectionView *photosCollectionView;
 @property (strong, nonatomic) InstagramTagSearcher *searcher;
 @property NSMutableArray *instagramPhotos;
+@property CropperViewController *croppingView;
+
+@property id target;
+@property SEL action;
 
 @property (nonatomic, weak) id <InstagramViewControllerDelegate> delegate;
 

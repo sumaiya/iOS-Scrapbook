@@ -22,9 +22,26 @@
     if (self) {
         // Custom initialization
         [self.navigationItem setTitle:@"Photo Details"];
+        [self.view setUserInteractionEnabled:TRUE];
     }
     return self;
 }
+
+// called when the user taps the post button
+- (IBAction)presentPostComposer
+{
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        NSString *titleText = self.photoTitle.text;
+        self.composer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        
+        [self.composer setInitialText:[NSString stringWithFormat:@"Check out my masterpiece, %@! (posted by Scrapbook)",titleText]];
+        [self.composer addImage:self.photoView.image];
+        
+        [self presentViewController:self.composer animated:YES completion:nil];
+    }
+}
+
 
 - (void)setFieldsWithUrl:(NSString *)newUrl andTitle:(NSString *)newTitle andOwner:(NSString *)newOwner;
 {
@@ -40,7 +57,7 @@
     
     [self.photoView.layer setBorderColor: [[UIColor blackColor] CGColor]];
     [self.photoView.layer setBorderWidth: 4.0];
-
+   
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
