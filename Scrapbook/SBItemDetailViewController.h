@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MainTwitterPoster.h"
+#import <Social/Social.h>
+
 @interface SBItemDetailViewController : UIViewController
 
 
@@ -17,7 +18,7 @@
 @property IBOutlet UIButton *tweetButton;
 @property SLComposeViewController *composer;
 
-- (void)setFieldsWithUrl:(NSString *)newUrl andTitle:(NSString *)newTitle andOwner:(NSString *)newOwner;
+- (void)setFieldsWithImage:(UIImage *)imageToShow andTitle:(NSString *)newTitle andOwner:(NSString *)newOwner;
 - (IBAction)presentPostComposer;
 
 

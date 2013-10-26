@@ -8,6 +8,7 @@
 
 #import "SBAppDelegate.h"
 #import "FlickrViewController.h"
+#import "CropperViewController.h"
 
 @interface FlickrViewController ()
 
@@ -20,6 +21,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.flickrPhotos = [[NSMutableArray alloc] initWithCapacity:0];
+        self.croppingView = [[CropperViewController alloc] init];
+        [self.croppingView setup];
+        self.delegate = self.croppingView;
     }
     return self;
 }
@@ -71,7 +75,7 @@
     NSMutableArray *photos = [[data objectForKey:@"photos"] objectForKey:@"photo"];
     
     for (NSMutableDictionary *photo in photos) {
-        NSString *photoUrl = [NSString stringWithFormat:@"http://farm%@.staticflickr.com/%@/%@_%@_q.jpg", [photo objectForKey:@"farm"], [photo objectForKey:@"server"], [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
+        NSString *photoUrl = [NSString stringWithFormat:@"http://farm%@.staticflickr.com/%@/%@_%@_n.jpg", [photo objectForKey:@"farm"], [photo objectForKey:@"server"], [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
         // add photo URLS to self.flickrPhotos
         [self.flickrPhotos addObject:photoUrl];
     }
@@ -126,8 +130,13 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *url = [self.flickrPhotos objectAtIndex:indexPath.item];
-    [self.delegate didGetUrl:url]; //pass URL back to AddSBItemViewController
-    [self.navigationController popViewControllerAnimated:YES];
+    NSData *imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: url]];
+    
+    UIImage *imageToSend = [UIImage imageWithData: imageData];
+    
+    [self.delegate didGetImage:imageToSend];
+    
+    [self.navigationController pushViewController:self.croppingView animated:YES];
 }
 
 #pragma mark – UICollectionViewDelegateFlowLayout

@@ -15,7 +15,7 @@
 + (void)createEditableCopyOfDatabaseIfNeeded;
 + (void)initDatabase;
 + (NSMutableArray *)fetchAllSBItems;
-+ (void)saveSBItemWithURL:(NSString *)url andTitle:(NSString *)title andOwner:(NSString *)photog;
++ (void)saveSBItemWithImage:(NSData *)imageData andTitle:(NSString *)title andOwner:(NSString *)photog;
 + (void)deleteSBItem:(int)rowid;
 + (void)cleanUpDatabaseForQuit;
 

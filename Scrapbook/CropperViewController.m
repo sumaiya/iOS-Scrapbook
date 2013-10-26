@@ -7,7 +7,8 @@
 //
 
 #import "CropperViewController.h"
-#import "FilterEditor.h"
+#import "FilterViewController.h"
+#import "SBAppDelegate.h"
 
 @interface CropperViewController ()
 
@@ -20,16 +21,15 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.filterController   = [[FilterEditor alloc] init];
-        [self.filterController setup];        
+        self.filterController = [[FilterViewController alloc] init];
+        self.delegate = self.filterController;
+     //   [self.filterController setup];
     }
     return self;
 }
 
 - (void)setup
-{
-    [self.view setBackgroundColor:[UIColor whiteColor]];
-    
+{    
     self.mainImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
     [self.mainImageView setContentMode:UIViewContentModeScaleAspectFit];
     [self.mainImageView setUserInteractionEnabled:YES];
@@ -44,6 +44,14 @@
     [self.cropper addGestureRecognizer:self.doubleTabRecognizer];
     
     [self.view addSubview:self.mainImageView];
+    
+    self.wholeImage = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.wholeImage setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.wholeImage setBackgroundColor:[UIColor blackColor]];
+    [self.wholeImage setFrame:CGRectMake(70, 330, 180, 30)];
+    [self.wholeImage setTitle:@"Use full image" forState:UIControlStateNormal];
+    [self.wholeImage addTarget:self action:@selector(sendWholeImage) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.wholeImage];
 }
 
 - (void)didGetImage:(UIImage *)sentImage;
@@ -61,15 +69,21 @@
     CIImage *croppedImage = [image imageByCroppingToRect:[self.cropper cropBounds]];
     UIImage *croppedUIImage = [UIImage imageWithCIImage:croppedImage];
     
-    if (self.target != nil && self.action != nil) {
-        NSLog(@"sending the image");
-        [self.target performSelector:self.action withObject:croppedFromCG];
-    }
+    [self.delegate didGetCroppedImage:croppedFromCG];
+
+    [self.navigationController pushViewController:self.filterController animated:YES];
+}
+
+-(void)sendWholeImage {
+    
+    [self.delegate didGetCroppedImage:self.mainImageView.image];
     [self.navigationController pushViewController:self.filterController animated:YES];
 }
 
 - (void)viewDidLoad
 {
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[(SBAppDelegate *)[[UIApplication sharedApplication] delegate] BACKGROUND_TEXTURE]]]];
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }

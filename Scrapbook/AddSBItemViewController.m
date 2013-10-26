@@ -8,6 +8,8 @@
 
 #import "AddSBItemViewController.h"
 #import "SBAppDelegate.h"
+#import "SBDatabase.h"
+#import "SBItemsViewController.h"
 
 @interface AddSBItemViewController ()
 
@@ -22,45 +24,28 @@
         // Custom initialization
         [self clearFields];
         [self.navigationItem setTitle:@"Add Photo"];
-//        //create the tab bar controller object
-//        self.tabBarController = [[UITabBarController alloc] init];
-//        
-//        //create the first view controller
-//        self.instagramView = [[InstagramViewController alloc] initWithNibName:@"InstagramViewController" bundle:nil];
-//        [self.instagramView.view setFrame:[[UIScreen mainScreen] bounds]];
-//        //this is where we set the main (instagram) view's representation on the tab bar
-//        self.instagramView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Instagram" image:[UIImage imageNamed:@"86-camera.png"] tag:1];
-//        
-//        //create the second view controller
-//        self.flickrView = [[FlickrViewController alloc] initWithNibName:@"FlickrViewController" bundle:nil];
-//        [self.flickrView.view setFrame:[[UIScreen mainScreen] bounds]];
-//        
-//        //this is where we set the flickr view's representation on the tab bar
-//        self.flickrView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Flickr" image:[UIImage imageNamed:@"41-picture-frame.png"] tag:2];
-//      
-//        //add the viewcontrollers to the tab bar
-//        [self.tabBarController setViewControllers:[NSArray arrayWithObjects:self.instagramView, self.flickrView, nil] animated:YES];
-//
-//        self.flickrView.delegate = self;
-//        self.instagramView.delegate = self;
     }
     return self;
 }
 
 
 -(IBAction)addButtonDidGetPressed:(id)sender {
-    NSMutableDictionary *temp = [NSMutableDictionary dictionaryWithObjects:[NSArray arrayWithObjects:self.photoUrl, self.photoTitle.text, self.photoOwner.text, nil] forKeys:[NSArray arrayWithObjects:@"url", @"title", @"owner", nil]];
 
-    [self.target performSelector:self.action withObject:temp];
-    [self clearFields];
-    [self.navigationController popViewControllerAnimated:YES];
+   if (self.addButton.
+       isEnabled) {
+
+        [SBDatabase saveSBItemWithImage:self.imageData andTitle:self.photoTitle.text andOwner:self.photoOwner.text];
+       //TODO does not save with filter or cropping...??
+       
+        [self clearFields];
+
+        SBItemsViewController *rootController = [self.navigationController.viewControllers objectAtIndex:0];
+
+       [rootController refreshData];
+       
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
-
-
--(IBAction)selectPhotoButtonDidGetPressed:(id)sender {
-    [self.navigationController pushViewController:self.tabBarController animated:YES];
-}
-
 
 -(void)clearFields
 {
@@ -81,16 +66,29 @@
     return YES;
 }
 
-- (void)didGetUrl:(NSString *)url
-{
-    self.photoUrl = url;
-    NSData *imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: url]];
-    self.photoView.image = [UIImage imageWithData: imageData];
+-(void)didGetImage:(UIImage *)sentImage {
+    self.imageToShow = sentImage;
+    
+    [self viewDidLoad];
+    
+    self.imageData = UIImagePNGRepresentation(self.photoView.image);
+//    self.imageData = UIImageJPEGRepresentation(self.photoView.image,1.0);
+    NSLog(@"got data");
+    
+    while (self.imageData == NULL) {
+        self.addButton.enabled = NO;
+    }
+    NSLog(@"data is not null");
+
+    self.addButton.enabled = YES;
 }
 
 - (void)viewDidLoad
 {
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[(SBAppDelegate *)[[UIApplication sharedApplication] delegate] BACKGROUND_TEXTURE]]]];;
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[(SBAppDelegate *)[[UIApplication sharedApplication] delegate] BACKGROUND_TEXTURE]]]];
+  
+    self.photoView.image = self.imageToShow;
+
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }

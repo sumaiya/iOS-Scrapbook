@@ -9,9 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "CropRegionView.h"
 #import "InstagramViewController.h"
-@class FilterEditor;
+#import "FlickrViewController.h"
+#import "CameraViewController.h"
 
-@interface CropperViewController : UIViewController <InstagramViewControllerDelegate>
+@protocol CropperViewControllerDelegate <NSObject>
+- (void)didGetCroppedImage:(UIImage *)sentImage;
+@end
+
+@class FilterViewController;
+
+@interface CropperViewController : UIViewController <InstagramViewControllerDelegate, FlickrViewControllerDelegate, CameraViewControllerDelegate>
 
 @property UIImageView *mainImageView;
 @property CropRegionView *cropper;
@@ -19,13 +26,16 @@
 @property UIView *bottomCropField;
 @property UIView *leftCropField;
 @property UIView *rightCropField;
+@property UIButton *wholeImage;
 
-@property FilterEditor *filterController;
+@property FilterViewController *filterController;
 
 @property UITapGestureRecognizer *doubleTabRecognizer;
+//
+//@property id target;
+//@property SEL action;
 
-@property id target;
-@property SEL action;
+@property (nonatomic, weak) id <CropperViewControllerDelegate> delegate;
 
 -(void)setup;
 -(void)cropImageAndSendToTarget;

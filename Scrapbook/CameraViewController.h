@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class CameraViewController;
+
+@protocol CameraViewControllerDelegate <NSObject>
+- (void)didGetImage:(UIImage *)sentImage;
+@end
+
+@class CropperViewController;
+
 @interface CameraViewController : UIViewController
 
 @property UIImagePickerController *camera;
@@ -17,7 +25,12 @@
 
 @property UIButton *presentCameraButton;
 
-@property UIImageView *selectedImageView;
+//@property UIImageView *selectedImageView;
+
+@property CropperViewController *croppingView;
+
+
+@property (nonatomic, weak) id <CameraViewControllerDelegate> delegate;
 
 - (void)setup;
 

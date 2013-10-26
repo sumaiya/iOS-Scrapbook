@@ -22,18 +22,11 @@
     if (self) {
         // Custom initialization
         
-        //self.sbItems = [[NSMutableArray alloc] initWithCapacity:0];
         self.sbItems = [SBDatabase fetchAllSBItems];
         
         // register the type of view to create for a table cell
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-        
-        // initialize the sb item creation view controller
-//        self.addSBItemViewController = [[AddSBItemViewController alloc] initWithNibName:@"AddSBItemViewController" bundle:nil];
-//        self.addSBItemViewController.target = self;
-//        self.addSBItemViewController.action = @selector(addSBItem:);
-//
-        
+                
         //create the tab bar controller object
         self.tabBarController = [[UITabBarController alloc] init];
         
@@ -41,19 +34,19 @@
         self.instagramView = [[InstagramViewController alloc] initWithNibName:@"InstagramViewController" bundle:nil];
         [self.instagramView.view setFrame:[[UIScreen mainScreen] bounds]];
         //this is where we set the main (instagram) view's representation on the tab bar
-        self.instagramView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Instagram" image:[UIImage imageNamed:@"86-camera.png"] tag:1];
+        self.instagramView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Instagram" image:[UIImage imageNamed:@"41-picture-frame.png"] tag:1];
         
         //create the second view controller
         self.flickrView = [[FlickrViewController alloc] initWithNibName:@"FlickrViewController" bundle:nil];
         [self.flickrView.view setFrame:[[UIScreen mainScreen] bounds]];
         
         //this is where we set the flickr view's representation on the tab bar
-        self.flickrView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Flickr" image:[UIImage imageNamed:@"41-picture-frame.png"] tag:2];
+        self.flickrView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Flickr" image:[UIImage imageNamed:@"121-landscape.png"] tag:2];
         
         //set up camera view controller
         self.cameraView = [[CameraViewController alloc] init];
         [self.cameraView setup];
-        self.cameraView.photoReel.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Photo Reel" image:[UIImage imageNamed:@"41-picture-frame.png"] tag:3];
+        self.cameraView.photoReel.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Photos" image:[UIImage imageNamed:@"46-movie-2.png"] tag:3];
         
         if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
             self.cameraView.camera.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Camera" image:[UIImage imageNamed:@"86-camera.png"] tag:4];
@@ -63,27 +56,11 @@
         else {
             [self.tabBarController setViewControllers:[NSArray arrayWithObjects:self.instagramView, self.flickrView, self.cameraView.photoReel, nil] animated:YES];
         }
-
-        
-//        self.flickrView.delegate = self;
-//        self.instagramView.delegate = self;
-
-        
+       
         // initialize the sb item detail view controller
         self.sbItemDetailViewController = [[SBItemDetailViewController alloc] initWithNibName:@"SBItemDetailViewController" bundle:nil];
     }
     return self;
-}
-
-// this is called when from the AddSBItemViewController when someone taps the Add button
-- (void)addSBItem:(NSMutableDictionary *)data
-{
-    // we have to tell the tableView to reload itself after we modify the data array
-    [SBDatabase saveSBItemWithURL:[data objectForKey:@"url"] andTitle:[data objectForKey:@"title"] andOwner:[data objectForKey:@"owner"]];
-    self.sbItems = [SBDatabase fetchAllSBItems];
-
-     //   [self.sbItems addObject:sbItemInfo];
-    [self.tableView reloadData];
 }
 
 - (void)addButtonPressed
@@ -93,6 +70,7 @@
 
 - (void)viewDidLoad
 {
+    [self refreshData];
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -100,6 +78,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)refreshData {
+    self.sbItems = [SBDatabase fetchAllSBItems];
+    [self.tableView reloadData];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -132,11 +116,8 @@
     // Configure the cell...
     SBItem *temp = [self.sbItems objectAtIndex:indexPath.row];
     
-    // get an image view from URL
-    NSData *imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: temp.url]];
-    
     //set image and text
-    cell.imageView.image = [UIImage imageWithData: imageData];
+    cell.imageView.image = temp.imageToDisplay;
     [[cell textLabel] setText:[NSString stringWithFormat:@" %@", temp.title]];
     return cell;
 }
@@ -154,11 +135,10 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+            // Delete the row from the data source
+
         [SBDatabase deleteSBItem:[[self.sbItems objectAtIndex:indexPath.row] rowid]];
         self.sbItems = [SBDatabase fetchAllSBItems];
-
-        //[self.sbItems removeObjectAtIndex:indexPath.row];
         
         // When this next line is executed, the data has to agree with the changes this line is performing on the table view
         // if the data doesn't agree, the app falls all over itself and dies
@@ -166,11 +146,13 @@
         // if you don't believe me, try reversing these two lines... just go ahead and try
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
+ 
     }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }
-    //[self.tableView reloadData]; //COMMENT BACK IN?
+    [self refreshData];
+  //  [self.tableView reloadData]; //COMMENT BACK IN?
 }
 
 
@@ -207,7 +189,7 @@
     
     [self.navigationController pushViewController:self.sbItemDetailViewController animated:YES];
     
-    [self.sbItemDetailViewController setFieldsWithUrl:temp.url andTitle:temp.title andOwner:temp.owner];
+    [self.sbItemDetailViewController setFieldsWithImage:temp.imageToDisplay andTitle:temp.title andOwner:temp.owner];
     
 }
 

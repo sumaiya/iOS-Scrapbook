@@ -23,9 +23,6 @@
 @property NSMutableArray *instagramPhotos;
 @property CropperViewController *croppingView;
 
-@property id target;
-@property SEL action;
-
 @property (nonatomic, weak) id <InstagramViewControllerDelegate> delegate;
 
 - (void)handleInstagramData:(NSMutableDictionary *)data;

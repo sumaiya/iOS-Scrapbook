@@ -13,8 +13,10 @@ extern UIColor* BACKGROUND_TEXTURE;
 @class FlickrViewController;
 
 @protocol FlickrViewControllerDelegate <NSObject>
-- (void)didGetUrl:(NSString *)url;
+- (void)didGetImage:(UIImage *)sentImage;
 @end
+
+@class CropperViewController;
 
 @interface FlickrViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -22,6 +24,7 @@ extern UIColor* BACKGROUND_TEXTURE;
 @property (strong, nonatomic) UICollectionView *photosCollectionView;
 @property (strong, nonatomic) FlickrTagSearcher *searcher;
 @property NSMutableArray *flickrPhotos;
+@property CropperViewController *croppingView;
 
 @property (nonatomic, weak) id <FlickrViewControllerDelegate> delegate;
 

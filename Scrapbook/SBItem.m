@@ -10,10 +10,10 @@
 
 @implementation SBItem
 
--(id)initWithURL:(NSString *)photoUrl andTitle:(NSString *)titleText andOwner:(NSString *)ownerName andId:(int)rid
+-(id)initWithImage:(NSData *)imageData andTitle:(NSString *)titleText andOwner:(NSString *)ownerName andId:(int)rid
 {
     self = [super init];
-    self.url = photoUrl;
+    self.imageToDisplay = [UIImage imageWithData:imageData];
     self.title = titleText;
     self.owner = ownerName;
     self.rowid = rid;

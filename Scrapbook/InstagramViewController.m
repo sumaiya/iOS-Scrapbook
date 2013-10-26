@@ -81,7 +81,7 @@
     }
     
     for (NSMutableDictionary *photo in photos) {
-        NSString* photoUrl = [[[photo objectForKey:@"images"] objectForKey:@"thumbnail"] objectForKey:@"url"];
+        NSString* photoUrl = [[[photo objectForKey:@"images"] objectForKey:@"low_resolution"] objectForKey:@"url"];
         // add photo URLS to self.instagramPhotos
         [self.instagramPhotos addObject:photoUrl];
     }

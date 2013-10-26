@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "AddSBItemViewController.h"
+#import "AddSBItemViewController.h"
 #import "SBItemDetailViewController.h"
 #import "SBItem.h"
 #import "CameraViewController.h"
@@ -24,7 +24,8 @@
 @property (strong, nonatomic) FlickrViewController *flickrView;
 @property CameraViewController *cameraView;
 
-- (void)addSBItem:(NSMutableDictionary *)data;
+//- (void)addSBItem:(NSMutableDictionary *)data;
 - (void)addButtonPressed;
+-(void)refreshData;
 
 @end
