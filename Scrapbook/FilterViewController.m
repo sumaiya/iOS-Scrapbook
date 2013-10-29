@@ -56,7 +56,7 @@
     [self.blurButton setTitleColor:[UIColor blackColor] forState:UIControlStateDisabled];
     [self.blurButton setBackgroundColor:[UIColor blackColor]];
     [self.blurButton setFrame:CGRectMake(115, 325, 90, 30)];
-    [self.blurButton setTitle:@"blur" forState:UIControlStateNormal];
+    [self.blurButton setTitle:@"bloom" forState:UIControlStateNormal];
     [self.blurButton addTarget:self action:@selector(applyBlurFilter) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.blurButton];
     
@@ -106,15 +106,20 @@
 {
     if (self.currentImage != nil && self.sepiaButton.isEnabled) {
         
+        CIContext *context = [CIContext contextWithOptions:nil];
         CIImage *current = [CIImage imageWithCGImage:self.currentImage.CGImage];
         
         CIFilter *filter = [CIFilter filterWithName:@"CISepiaTone"];
         [filter setValue:current forKey:@"inputImage"];
         CIImage *newImage = [filter valueForKey:@"outputImage"];
+        CGImageRef cgimage = [context createCGImage:newImage fromRect:[newImage extent]];
         
+        UIImage *newUIImage = [UIImage imageWithCGImage:cgimage];
+        
+        CGImageRelease(cgimage);
         // uncomment this line if you want to skip from CI to UI image... avoiding CG
         // this will allow you to avoid the need for creating a context and releasing a created CGImage
-        UIImage *newUIImage = [UIImage imageWithCIImage:newImage];
+       // UIImage *newUIImage = [UIImage imageWithCIImage:newImage];
 
         self.currentImage = newUIImage;
                 
@@ -128,13 +133,16 @@
 {
     if (self.currentImage != nil && self.blurButton.isEnabled) {
         
+        CIContext *context = [CIContext contextWithOptions:nil];
         CIImage *current = [CIImage imageWithCGImage:self.currentImage.CGImage];
 
         CIFilter *filter = [CIFilter filterWithName:@"CIBloom"];
         [filter setValue:current forKey:@"inputImage"];
         CIImage *newImage = [filter valueForKey:@"outputImage"];
-      
-        UIImage *newUIImage = [UIImage imageWithCIImage:newImage];
+        CGImageRef cgimage = [context createCGImage:newImage fromRect:[newImage extent]];
+        
+        UIImage *newUIImage = [UIImage imageWithCGImage:cgimage];
+       // UIImage *newUIImage = [UIImage imageWithCIImage:newImage];
         
         self.currentImage = newUIImage;
         
@@ -147,14 +155,17 @@
 - (void)applyPosterizeFilter
 {
     if (self.currentImage != nil && self.posterizeButton.isEnabled) {
-        
+        CIContext *context = [CIContext contextWithOptions:nil];
         CIImage *current = [CIImage imageWithCGImage:self.currentImage.CGImage];
         
         CIFilter *filter = [CIFilter filterWithName:@"CIColorPosterize"];
         [filter setValue:current forKey:@"inputImage"];
         CIImage *newImage = [filter valueForKey:@"outputImage"];
-        
-        UIImage *newUIImage = [UIImage imageWithCIImage:newImage];
+        CGImageRef cgimage = [context createCGImage:newImage fromRect:[newImage extent]];
+
+        UIImage *newUIImage = [UIImage imageWithCGImage:cgimage];
+
+//        UIImage *newUIImage = [UIImage imageWithCIImage:newImage];
         
         self.currentImage = newUIImage;
         

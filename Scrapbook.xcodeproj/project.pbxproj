@@ -10,19 +10,19 @@
 		F00B9FEB181A19AB007A43C8 /* twitter-bird-blue-on-white.png in Resources */ = {isa = PBXBuildFile; fileRef = F00B9FEA181A19AB007A43C8 /* twitter-bird-blue-on-white.png */; };
 		F00B9FF2181A21B0007A43C8 /* CropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00B9FED181A219D007A43C8 /* CropperViewController.m */; };
 		F00B9FF3181A21B0007A43C8 /* CropRegionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00B9FEF181A219D007A43C8 /* CropRegionView.m */; };
-		F00B9FF4181A21B0007A43C8 /* FilterEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = F00B9FF1181A219E007A43C8 /* FilterEditor.m */; };
 		F00B9FF6181A2238007A43C8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00B9FF5181A2238007A43C8 /* QuartzCore.framework */; };
 		F00B9FF8181A2283007A43C8 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00B9FF7181A2283007A43C8 /* CoreImage.framework */; };
 		F00F42841807EC3C009B95A2 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = F00F42831807EC3C009B95A2 /* 86-camera.png */; };
 		F00F42861807EC48009B95A2 /* 41-picture-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = F00F42851807EC48009B95A2 /* 41-picture-frame.png */; };
-		F01A4D831819E17600A539C1 /* TwitterStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A4D821819E15F00A539C1 /* TwitterStreamer.m */; };
-		F01A4D861819E1A700A539C1 /* MainTwitterPoster.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A4D851819E19F00A539C1 /* MainTwitterPoster.m */; };
 		F01A4D881819E3F800A539C1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F01A4D871819E3F800A539C1 /* Accounts.framework */; };
 		F01A4D8A1819E40000A539C1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F01A4D891819E40000A539C1 /* Social.framework */; };
 		F0287C9E1819C77500D85845 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0287C9D1819C77500D85845 /* CameraViewController.m */; };
-		F032BDB617FF69FB008BAB62 /* SBDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F032BDB517FF69FB008BAB62 /* SBDatabase.m */; };
-		F032BDB817FF944E008BAB62 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F032BDB717FF944D008BAB62 /* libsqlite3.dylib */; };
-		F032BDBA17FF946E008BAB62 /* sbItems.sql in Resources */ = {isa = PBXBuildFile; fileRef = F032BDB917FF946E008BAB62 /* sbItems.sql */; };
+		F0386891181BA9F80057D793 /* 43-film-roll.png in Resources */ = {isa = PBXBuildFile; fileRef = F038688D181BA9F70057D793 /* 43-film-roll.png */; };
+		F0386894181BA9F80057D793 /* 121-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = F0386890181BA9F80057D793 /* 121-landscape.png */; };
+		F0386898181BAB990057D793 /* 46-movie-2.png in Resources */ = {isa = PBXBuildFile; fileRef = F0386897181BAB990057D793 /* 46-movie-2.png */; };
+		F038689B181BAF0A0057D793 /* SBDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F038689A181BAF0A0057D793 /* SBDatabase.m */; };
+		F038689D181BAF600057D793 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F038689C181BAF600057D793 /* libsqlite3.dylib */; };
+		F038689F181BB0CC0057D793 /* SBItemDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = F038689E181BB0CC0057D793 /* SBItemDB.sql */; };
 		F04FC0291807E2C200FDE304 /* FlickrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F04FC0271807E2C200FDE304 /* FlickrViewController.m */; };
 		F04FC02A1807E2C200FDE304 /* FlickrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F04FC0281807E2C200FDE304 /* FlickrViewController.xib */; };
 		F056A74F17F4B9BC0094158D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F056A74E17F4B9BC0094158D /* UIKit.framework */; };
@@ -43,6 +43,7 @@
 		F05CFD9617F6BB37003E32C1 /* InstagramTagSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F05CFD9517F6BB37003E32C1 /* InstagramTagSearcher.m */; };
 		F05CFD9917F6BC4F003E32C1 /* FlickrTagSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F05CFD9817F6BC4F003E32C1 /* FlickrTagSearcher.m */; };
 		F097C4EE180E41A900CAE500 /* subtle_grunge.png in Resources */ = {isa = PBXBuildFile; fileRef = F097C4ED180E41A900CAE500 /* subtle_grunge.png */; };
+		F0DC7657181A470100064722 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DC7656181A470000064722 /* FilterViewController.m */; };
 		F0ED9BC51807C03900DE656B /* scrapbookLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F0ED9BC31807C03900DE656B /* scrapbookLogo.png */; };
 		F0ED9BC61807C03900DE656B /* scrapbookLogoLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = F0ED9BC41807C03900DE656B /* scrapbookLogoLarge.png */; };
 		F0F5D0D11807C77E0068F038 /* InstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F5D0CF1807C77E0068F038 /* InstagramViewController.m */; };
@@ -55,24 +56,21 @@
 		F00B9FED181A219D007A43C8 /* CropperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CropperViewController.m; sourceTree = "<group>"; };
 		F00B9FEE181A219D007A43C8 /* CropRegionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CropRegionView.h; sourceTree = "<group>"; };
 		F00B9FEF181A219D007A43C8 /* CropRegionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CropRegionView.m; sourceTree = "<group>"; };
-		F00B9FF0181A219D007A43C8 /* FilterEditor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterEditor.h; sourceTree = "<group>"; };
-		F00B9FF1181A219E007A43C8 /* FilterEditor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterEditor.m; sourceTree = "<group>"; };
 		F00B9FF5181A2238007A43C8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F00B9FF7181A2283007A43C8 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		F00F42831807EC3C009B95A2 /* 86-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera.png"; sourceTree = "<group>"; };
 		F00F42851807EC48009B95A2 /* 41-picture-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "41-picture-frame.png"; sourceTree = "<group>"; };
-		F01A4D811819E15F00A539C1 /* TwitterStreamer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwitterStreamer.h; sourceTree = "<group>"; };
-		F01A4D821819E15F00A539C1 /* TwitterStreamer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwitterStreamer.m; sourceTree = "<group>"; };
-		F01A4D841819E19F00A539C1 /* MainTwitterPoster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTwitterPoster.h; sourceTree = "<group>"; };
-		F01A4D851819E19F00A539C1 /* MainTwitterPoster.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTwitterPoster.m; sourceTree = "<group>"; };
 		F01A4D871819E3F800A539C1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		F01A4D891819E40000A539C1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F0287C9C1819C77500D85845 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		F0287C9D1819C77500D85845 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
-		F032BDB417FF69FB008BAB62 /* SBDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBDatabase.h; sourceTree = "<group>"; };
-		F032BDB517FF69FB008BAB62 /* SBDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDatabase.m; sourceTree = "<group>"; };
-		F032BDB717FF944D008BAB62 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		F032BDB917FF946E008BAB62 /* sbItems.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sbItems.sql; sourceTree = "<group>"; };
+		F038688D181BA9F70057D793 /* 43-film-roll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "43-film-roll.png"; sourceTree = "<group>"; };
+		F0386890181BA9F80057D793 /* 121-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "121-landscape.png"; sourceTree = "<group>"; };
+		F0386897181BAB990057D793 /* 46-movie-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "46-movie-2.png"; sourceTree = "<group>"; };
+		F0386899181BAF090057D793 /* SBDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBDatabase.h; sourceTree = "<group>"; };
+		F038689A181BAF0A0057D793 /* SBDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDatabase.m; sourceTree = "<group>"; };
+		F038689C181BAF600057D793 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F038689E181BB0CC0057D793 /* SBItemDB.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SBItemDB.sql; sourceTree = "<group>"; };
 		F04FC0261807E2C200FDE304 /* FlickrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrViewController.h; sourceTree = "<group>"; };
 		F04FC0271807E2C200FDE304 /* FlickrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrViewController.m; sourceTree = "<group>"; };
 		F04FC0281807E2C200FDE304 /* FlickrViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlickrViewController.xib; sourceTree = "<group>"; };
@@ -104,6 +102,8 @@
 		F05CFD9717F6BC4F003E32C1 /* FlickrTagSearcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrTagSearcher.h; sourceTree = "<group>"; };
 		F05CFD9817F6BC4F003E32C1 /* FlickrTagSearcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrTagSearcher.m; sourceTree = "<group>"; };
 		F097C4ED180E41A900CAE500 /* subtle_grunge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subtle_grunge.png; sourceTree = "<group>"; };
+		F0DC7655181A46FF00064722 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
+		F0DC7656181A470000064722 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
 		F0ED9BC31807C03900DE656B /* scrapbookLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrapbookLogo.png; sourceTree = "<group>"; };
 		F0ED9BC41807C03900DE656B /* scrapbookLogoLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrapbookLogoLarge.png; sourceTree = "<group>"; };
 		F0F5D0CE1807C77E0068F038 /* InstagramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramViewController.h; sourceTree = "<group>"; };
@@ -116,11 +116,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F038689D181BAF600057D793 /* libsqlite3.dylib in Frameworks */,
 				F00B9FF8181A2283007A43C8 /* CoreImage.framework in Frameworks */,
 				F00B9FF6181A2238007A43C8 /* QuartzCore.framework in Frameworks */,
 				F01A4D8A1819E40000A539C1 /* Social.framework in Frameworks */,
 				F01A4D881819E3F800A539C1 /* Accounts.framework in Frameworks */,
-				F032BDB817FF944E008BAB62 /* libsqlite3.dylib in Frameworks */,
 				F056A74F17F4B9BC0094158D /* UIKit.framework in Frameworks */,
 				F056A75117F4B9BC0094158D /* Foundation.framework in Frameworks */,
 				F056A75317F4B9BC0094158D /* CoreGraphics.framework in Frameworks */,
@@ -133,7 +133,7 @@
 		F056A74217F4B9BB0094158D = {
 			isa = PBXGroup;
 			children = (
-				F032BDB717FF944D008BAB62 /* libsqlite3.dylib */,
+				F038689C181BAF600057D793 /* libsqlite3.dylib */,
 				F056A75417F4B9BC0094158D /* Scrapbook */,
 				F056A74D17F4B9BC0094158D /* Frameworks */,
 				F056A74C17F4B9BC0094158D /* Products */,
@@ -167,8 +167,15 @@
 			children = (
 				F00F42831807EC3C009B95A2 /* 86-camera.png */,
 				F00F42851807EC48009B95A2 /* 41-picture-frame.png */,
+				F038688D181BA9F70057D793 /* 43-film-roll.png */,
+				F0386890181BA9F80057D793 /* 121-landscape.png */,
+				F0386897181BAB990057D793 /* 46-movie-2.png */,
+				F097C4ED180E41A900CAE500 /* subtle_grunge.png */,
 				F056A75D17F4B9BC0094158D /* SBAppDelegate.h */,
 				F056A75E17F4B9BC0094158D /* SBAppDelegate.m */,
+				F0386899181BAF090057D793 /* SBDatabase.h */,
+				F038689A181BAF0A0057D793 /* SBDatabase.m */,
+				F038689E181BB0CC0057D793 /* SBItemDB.sql */,
 				F056A78017F4C01E0094158D /* SBItem.h */,
 				F056A78117F4C01E0094158D /* SBItem.m */,
 				F056A76B17F4BAA60094158D /* SBItemsViewController.h */,
@@ -177,23 +184,17 @@
 				F00B9FED181A219D007A43C8 /* CropperViewController.m */,
 				F00B9FEE181A219D007A43C8 /* CropRegionView.h */,
 				F00B9FEF181A219D007A43C8 /* CropRegionView.m */,
-				F00B9FF0181A219D007A43C8 /* FilterEditor.h */,
-				F00B9FF1181A219E007A43C8 /* FilterEditor.m */,
+				F0DC7655181A46FF00064722 /* FilterViewController.h */,
+				F0DC7656181A470000064722 /* FilterViewController.m */,
 				F056A77B17F4BF4E0094158D /* SBItemDetailViewController.h */,
 				F056A77C17F4BF4E0094158D /* SBItemDetailViewController.m */,
 				F056A77D17F4BF4E0094158D /* SBItemDetailViewController.xib */,
 				F00B9FEA181A19AB007A43C8 /* twitter-bird-blue-on-white.png */,
-				F01A4D841819E19F00A539C1 /* MainTwitterPoster.h */,
-				F01A4D851819E19F00A539C1 /* MainTwitterPoster.m */,
-				F01A4D811819E15F00A539C1 /* TwitterStreamer.h */,
-				F01A4D821819E15F00A539C1 /* TwitterStreamer.m */,
 				F056A77617F4BE0D0094158D /* AddSBItemViewController.h */,
 				F056A77717F4BE0E0094158D /* AddSBItemViewController.m */,
 				F056A77817F4BE0E0094158D /* AddSBItemViewController.xib */,
-				F097C4ED180E41A900CAE500 /* subtle_grunge.png */,
-				F032BDB417FF69FB008BAB62 /* SBDatabase.h */,
-				F032BDB517FF69FB008BAB62 /* SBDatabase.m */,
-				F032BDB917FF946E008BAB62 /* sbItems.sql */,
+				F0287C9C1819C77500D85845 /* CameraViewController.h */,
+				F0287C9D1819C77500D85845 /* CameraViewController.m */,
 				F0F5D0CE1807C77E0068F038 /* InstagramViewController.h */,
 				F0F5D0CF1807C77E0068F038 /* InstagramViewController.m */,
 				F0F5D0D01807C77E0068F038 /* InstagramViewController.xib */,
@@ -205,8 +206,6 @@
 				F05CFD9717F6BC4F003E32C1 /* FlickrTagSearcher.h */,
 				F05CFD9817F6BC4F003E32C1 /* FlickrTagSearcher.m */,
 				F056A75517F4B9BC0094158D /* Supporting Files */,
-				F0287C9C1819C77500D85845 /* CameraViewController.h */,
-				F0287C9D1819C77500D85845 /* CameraViewController.m */,
 			);
 			path = Scrapbook;
 			sourceTree = "<group>";
@@ -285,7 +284,6 @@
 				F056A76517F4B9BC0094158D /* Default-568h@2x.png in Resources */,
 				F056A77A17F4BE0E0094158D /* AddSBItemViewController.xib in Resources */,
 				F056A77F17F4BF4E0094158D /* SBItemDetailViewController.xib in Resources */,
-				F032BDBA17FF946E008BAB62 /* sbItems.sql in Resources */,
 				F0ED9BC51807C03900DE656B /* scrapbookLogo.png in Resources */,
 				F0ED9BC61807C03900DE656B /* scrapbookLogoLarge.png in Resources */,
 				F0F5D0D21807C77E0068F038 /* InstagramViewController.xib in Resources */,
@@ -294,6 +292,10 @@
 				F00F42861807EC48009B95A2 /* 41-picture-frame.png in Resources */,
 				F097C4EE180E41A900CAE500 /* subtle_grunge.png in Resources */,
 				F00B9FEB181A19AB007A43C8 /* twitter-bird-blue-on-white.png in Resources */,
+				F0386891181BA9F80057D793 /* 43-film-roll.png in Resources */,
+				F0386894181BA9F80057D793 /* 121-landscape.png in Resources */,
+				F0386898181BAB990057D793 /* 46-movie-2.png in Resources */,
+				F038689F181BB0CC0057D793 /* SBItemDB.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,9 +308,6 @@
 			files = (
 				F00B9FF2181A21B0007A43C8 /* CropperViewController.m in Sources */,
 				F00B9FF3181A21B0007A43C8 /* CropRegionView.m in Sources */,
-				F00B9FF4181A21B0007A43C8 /* FilterEditor.m in Sources */,
-				F01A4D861819E1A700A539C1 /* MainTwitterPoster.m in Sources */,
-				F01A4D831819E17600A539C1 /* TwitterStreamer.m in Sources */,
 				F056A75B17F4B9BC0094158D /* main.m in Sources */,
 				F056A75F17F4B9BC0094158D /* SBAppDelegate.m in Sources */,
 				F056A76D17F4BAA60094158D /* SBItemsViewController.m in Sources */,
@@ -317,10 +316,11 @@
 				F056A78217F4C01E0094158D /* SBItem.m in Sources */,
 				F05CFD9617F6BB37003E32C1 /* InstagramTagSearcher.m in Sources */,
 				F05CFD9917F6BC4F003E32C1 /* FlickrTagSearcher.m in Sources */,
-				F032BDB617FF69FB008BAB62 /* SBDatabase.m in Sources */,
 				F0F5D0D11807C77E0068F038 /* InstagramViewController.m in Sources */,
 				F04FC0291807E2C200FDE304 /* FlickrViewController.m in Sources */,
 				F0287C9E1819C77500D85845 /* CameraViewController.m in Sources */,
+				F0DC7657181A470100064722 /* FilterViewController.m in Sources */,
+				F038689B181BAF0A0057D793 /* SBDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

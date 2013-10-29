@@ -73,12 +73,10 @@
     
     self.imageData = UIImagePNGRepresentation(self.photoView.image);
 //    self.imageData = UIImageJPEGRepresentation(self.photoView.image,1.0);
-    NSLog(@"got data");
     
     while (self.imageData == NULL) {
         self.addButton.enabled = NO;
     }
-    NSLog(@"data is not null");
 
     self.addButton.enabled = YES;
 }
